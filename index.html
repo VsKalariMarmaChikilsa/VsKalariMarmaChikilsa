@@ -1,268 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<title>VS Kalari Marma Chikilsa | Traditional Kalaripayattu Training</title>
+
 <meta charset="UTF-8">
-<title>VS Kalari Marma Chikilsa</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body{
-margin:0;
-font-family:Arial, sans-serif;
-background:#050505;
-color:white;
-scroll-behavior:smooth;
-}
+<!-- SEO -->
+<meta name="description" content="VS Kalari Marma Chikilsa is a traditional Kalaripayattu and Marma Chikilsa training center in Keezhthonnakkal, Kerala. Teacher: Shiji.">
+<meta name="keywords" content="VS Kalari Marma Chikilsa, Kalaripayattu, Marma Chikilsa, Martial Arts Kerala, Kalari Training Keezhthonnakkal">
+<meta name="author" content="VS Kalari Marma Chikilsa">
+<meta name="robots" content="index, follow">
 
-/* HEADER */
+<meta property="og:title" content="VS Kalari Marma Chikilsa">
+<meta property="og:description" content="Traditional martial arts training center in Kerala. Teacher Shiji">
+<meta property="og:image" content="logo.png">
+<meta property="og:url" content="https://vskalarimarmachikilsa.github.io/VsKalariMarmaChikilsa/">
+<meta property="og:type" content="website">
+
+<link rel="icon" href="logo.png">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+body{background:#000;color:#fff;overflow-x:hidden;}
+
 header{
+background:#111;
+padding:15px 20px;
 position:fixed;
-top:0;
 width:100%;
-background:black;
+top:0;
+z-index:1000;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:10px 20px;
-border-bottom:2px solid #ff9800;
-z-index:1000;
-}
-.logo{display:flex;align-items:center;}
-.logo img{width:50px;}
-.logo h1{color:#ff9800;margin-left:10px;font-size:18px;}
-
-nav{display:flex;}
-nav a{
-color:white;
-margin:0 10px;
-text-decoration:none;
-font-weight:bold;
-}
-nav a:hover{color:#ff9800;}
-
-.menu-btn{
-display:none;
-font-size:26px;
-cursor:pointer;
 }
 
-/* HERO PARALLAX */
+header img{height:50px;}
+
+nav ul{list-style:none;display:flex;gap:20px;}
+nav a{color:#fff;text-decoration:none;font-weight:bold;}
+
+.menu-btn{display:none;font-size:26px;cursor:pointer;}
+
+@media(max-width:768px){
+nav ul{display:none;flex-direction:column;background:#111;position:absolute;top:70px;right:0;width:200px;}
+nav ul.show{display:flex;}
+.menu-btn{display:block;}
+}
+
 .hero{
 height:100vh;
-background:url("img1.jpg") center/cover fixed no-repeat;
+background:url('img1.jpg') center/cover fixed;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
 }
-.hero div{
-background:rgba(0,0,0,0.7);
-padding:40px;
-border:3px solid #ff9800;
-}
-.hero h2{font-size:40px;color:#ff9800;}
 
-/* SECTION */
-section{
-padding:80px 20px;
-max-width:1100px;
-margin:auto;
-opacity:0;
-transform:translateY(60px);
-transition:1s;
-}
-section.show{
-opacity:1;
-transform:translateY(0);
-}
-h2{
-text-align:center;
-color:#ff9800;
-font-size:30px;
+.hero h1{
+font-size:50px;
+background:rgba(0,0,0,0.6);
+padding:20px;
+border:3px solid red;
+animation:swordSlash 2s infinite;
 }
 
-/* BOX */
-.box{
-background:#111;
-padding:25px;
-border-left:5px solid #ff9800;
+@keyframes swordSlash{
+0%{box-shadow:0 0 5px red;}
+50%{box-shadow:0 0 30px red;}
+100%{box-shadow:0 0 5px red;}
 }
 
-/* PARALLAX IMAGE SECTION */
+section{padding:80px 20px;text-align:center;}
+
 .parallax{
-height:300px;
-background:url("img3.jpg") center/cover fixed no-repeat;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:32px;
-color:#ff9800;
-text-shadow:2px 2px 5px black;
+background:url('img2.jpg') center/cover fixed;
+padding:120px 20px;
 }
 
-/* SWORD SLASH */
-.slash{
-width:0;
-height:4px;
-background:#ff9800;
-margin:40px auto;
-animation:slash 1.5s forwards;
-}
-@keyframes slash{
-from{width:0;}
-to{width:80%;}
-}
-
-/* TEACHER */
-.teacher{text-align:center;}
-.teacher img{
-width:230px;
-border:4px solid #ff9800;
-border-radius:10px;
-}
-
-/* GALLERY */
 .gallery{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
 gap:10px;
 }
+
 .gallery img{
 width:100%;
-border:3px solid #222;
+border:2px solid red;
+transition:transform 0.5s;
+}
+.gallery img:hover{transform:scale(1.1);}
+
+.teacher img{
+width:200px;
+border-radius:50%;
+border:3px solid red;
 }
 
-/* CONTACT */
-.contact{
-background:#000;
-padding:40px;
-text-align:center;
-}
-
-/* MAP */
-iframe{
-width:100%;
-height:300px;
-border:0;
-margin-top:15px;
-}
-
-/* FOOTER */
 footer{
-background:#000;
-color:#aaa;
+background:#111;
+padding:20px;
 text-align:center;
-padding:15px;
-border-top:2px solid #ff9800;
 }
 
-/* MOBILE */
-@media(max-width:768px){
-nav{
-display:none;
-flex-direction:column;
-background:black;
-position:absolute;
-top:60px;
-right:0;
-width:100%;
-}
-nav.show{display:flex;}
-nav a{
-padding:15px;
-border-bottom:1px solid #333;
-}
-.menu-btn{display:block;}
-}
+.scroll-animate{opacity:0;transform:translateY(40px);transition:1s;}
+.scroll-animate.show{opacity:1;transform:translateY(0);}
 </style>
 </head>
 
 <body>
 
 <header>
-<div class="logo">
 <img src="logo.png">
-<h1>VS Kalari Marma Chikilsa</h1>
-</div>
-
 <div class="menu-btn" onclick="toggleMenu()">☰</div>
-
-<nav id="menu">
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#teacher">Teacher</a>
-<a href="#gallery">Gallery</a>
-<a href="#contact">Contact</a>
+<nav>
+<ul id="menu">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#teacher">Teacher</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#contact">Location</a></li>
+</ul>
 </nav>
 </header>
 
-<div class="hero" id="home">
-<div>
-<h2>Traditional Kalaripayattu</h2>
-<p>Warrior Training for Students Only</p>
-</div>
-</div>
-
-<div class="slash"></div>
-
-<section id="about">
-<h2>About Our Kalari</h2>
-<div class="box">
-<p>
-VS Kalari Marma Chikilsa is a traditional Kalaripayattu training centre for students.
-The ancient martial art of Kerala builds strength, flexibility and warrior spirit.
-</p>
-<p><b>Location:</b> MVF8+57, Keezhthonnakkal, Kerala 695313</p>
-</div>
+<section class="hero" id="home">
+<h1>VS Kalari Marma Chikilsa</h1>
 </section>
 
-<div class="parallax">⚔️ Ancient Warrior Art ⚔️</div>
-
-<section>
-<h2>ഞങ്ങളുടെ കളരി</h2>
-<div class="box">
-<p>
-വിഎസ് കളരി മർമ്മ ചികിത്സ കേരളത്തിന്റെ പുരാതനമായ കലരിപ്പയറ്റു പരിശീലന കേന്ദ്രമാണ്.
-വിദ്യാർത്ഥികൾക്ക് മാത്രമാണ് പരിശീലനം നൽകുന്നത്.
-</p>
-</div>
+<section id="about" class="scroll-animate">
+<h2>About Us</h2>
+<p>VS Kalari Marma Chikilsa is a traditional Kalaripayattu and Marma Chikilsa training center in Keezhthonnakkal, Kerala. We preserve ancient martial art techniques and healing science.</p>
 </section>
 
-<div class="slash"></div>
-
-<section id="teacher">
-<h2>Our Teacher</h2>
-<div class="teacher">
-<img src="img2.jpg">
-<p><b>Teacher Shiji</b></p>
-<p>Master of Kalaripayattu & Marma Chikilsa</p>
-</div>
+<section class="parallax scroll-animate">
+<h2>Traditional Martial Arts</h2>
+<p>Experience the power, discipline and culture of Kalaripayattu.</p>
 </section>
 
-<div class="parallax">🥋 Strength • Discipline • Tradition 🥋</div>
+<section id="teacher" class="teacher scroll-animate">
+<h2>Teacher</h2>
+<img src="img3.jpg">
+<p><strong>Teacher Shiji</strong></p>
+</section>
 
-<section id="gallery">
-<h2>Training Gallery</h2>
+<section id="gallery" class="scroll-animate">
+<h2>Gallery</h2>
 <div class="gallery">
-<img src="img1.jpg"><img src="img2.jpg"><img src="img3.jpg"><img src="img4.jpg"><img src="img5.jpg">
-<img src="img6.jpg"><img src="img7.jpg"><img src="img8.jpg"><img src="img9.jpg"><img src="img10.jpg">
+<img src="img1.jpg">
+<img src="img2.jpg">
+<img src="img3.jpg">
+<img src="img4.jpg">
+<img src="img5.jpg">
+<img src="img6.jpg">
+<img src="img7.jpg">
+<img src="img8.jpg">
+<img src="img9.jpg">
+<img src="img10.jpg">
 </div>
 </section>
 
-<section id="contact" class="contact">
-<h2>Contact & Location</h2>
-<p><b>Teacher:</b> Shiji</p>
-<p><b>Training:</b> Students only (Not for adults)</p>
-<p><b>Phone:</b> 9895286306 , 9995316306</p>
-
-<iframe 
-src="https://www.google.com/maps?q=MVF8%2B57%20Keezhthonnakkal%20Kerala%20695313&output=embed">
-</iframe>
+<section id="contact" class="scroll-animate">
+<h2>Location</h2>
+<p>MVF8+57, Keezhthonnakkal, Kerala 695313</p>
+<br>
+<iframe src="https://maps.google.com/maps?q=MVF8+57, Keezhthonnakkal, Kerala 695313&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="300" style="border:0;"></iframe>
 </section>
 
 <footer>
-<p>© 2026 VS Kalari Marma Chikilsa</p>
-<p>Website by Asworth N.S</p>
+<p>© 2026 VS Kalari Marma Chikilsa | All Rights Reserved</p>
 </footer>
 
 <script>
@@ -270,15 +177,16 @@ function toggleMenu(){
 document.getElementById("menu").classList.toggle("show");
 }
 
-/* Scroll Animation */
-const sections = document.querySelectorAll("section");
-window.addEventListener("scroll", ()=>{
-sections.forEach(sec=>{
-const top = sec.getBoundingClientRect().top;
-if(top < window.innerHeight - 100){
-sec.classList.add("show");
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
 }
 });
+});
+
+document.querySelectorAll('.scroll-animate').forEach(el=>{
+observer.observe(el);
 });
 </script>
 
