@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vskalarimarmachikilsa.github.io/VsKalariMarmaChikilsa/sitemap.xml
